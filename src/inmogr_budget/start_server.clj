@@ -7,4 +7,7 @@
         [ring.middleware.cookies]
         [ring.middleware.params]))
 (defn start-server [port-number app]
-  (run-jetty (wrap-cookies (wrap-gzip app)) {:port (Integer/parseInt port-number)}))
+  (let [port (if (integer? port-number)
+port-number
+(Integer/parseInt port-number)]
+(run-jetty (wrap-cookies (wrap-gzip app)) {:port port}))))

@@ -1,3 +1,5 @@
+/src/inmogr-budget/*.js
+*.js
 .gitignore
 /target
 /classes
@@ -10,5 +12,3 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
-/src/inmogr_budget_copy
-/src/inmogr_budget/*.backup.clj
