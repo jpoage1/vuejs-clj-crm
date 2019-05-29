@@ -1,0 +1,3 @@
+(-main)
+ (load-file "src/inmogr_budget/core.clj")
+exit
