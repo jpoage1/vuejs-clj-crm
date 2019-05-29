@@ -31,7 +31,7 @@
   (not-found error-message))
 
 (defn start-server [port-number app]
-  (run-jetty (wrap-cookies #'app) {:port (Integer/parseInt port-number)}))
+  (run-jetty (wrap-cookies (wrap-gzip #'app)) {:port (Integer/parseInt port-number)}))
 
 (defn -main
   [port-number]
