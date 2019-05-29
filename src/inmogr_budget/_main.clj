@@ -1,4 +1,4 @@
-(ns inmogr-budget.core
+(ns inmogr-budget.-main
   (:gen-class)
   (:require
    [inmogr-budget.start-server :refer [start-server]]
