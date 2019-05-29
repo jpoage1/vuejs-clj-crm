@@ -2,6 +2,7 @@
   (:gen-class)
   (:require
    [clojure.core :as clojure]
+   [inmogr-budget.send-json :refer [send-json]]
    [ring.middleware.reload :refer [wrap-reload]]
    [ring.adapter.jetty :as jetty]
    [ring.middleware.gzip :refer [wrap-gzip]]
@@ -13,14 +14,6 @@
         [ring.adapter.jetty]
         [ring.middleware.cookies]
         [ring.middleware.params]))
-(defn send-json
-  ([data] 
-   (send-json data 200))
-  ([data status]
-   {:status status
-    :headers {"Content-Type" "application/json"}
-    :cookies {"session_id" {:value "session-id-hash" :secure true :domain "127.0.0.1" :same-site :strict}}
-    :body data}))
 
 (def error-message (send-json ["Error"] 404))
 (defn stats [request]
