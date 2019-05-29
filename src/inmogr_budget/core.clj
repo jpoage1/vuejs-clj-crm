@@ -4,6 +4,7 @@
    [clojure.core :as clojure]
    [inmogr-budget.error-message :refer [error-message]]
    [inmogr-budget.stats :refer [stats]]
+   [inmogr-budget.start-server :refer [start-server]]
    [ring.middleware.reload :refer [wrap-reload]]
    [ring.adapter.jetty :as jetty]
    [ring.middleware.gzip :refer [wrap-gzip]]
@@ -17,9 +18,6 @@
         [ring.middleware.params]))
 (defroutes app (POST "/stats" [] stats)
   (not-found error-message))
-
-(defn start-server [port-number app]
-  (run-jetty (wrap-cookies (wrap-gzip #'app)) {:port (Integer/parseInt port-number)}))
 
 (defn -main
   [port-number]
