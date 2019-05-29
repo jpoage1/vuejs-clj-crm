@@ -1,6 +1,5 @@
 (ns inmogr-budget.start-server
   (:require
-   [clojure.core :as clojure]
    [ring.adapter.jetty :as jetty]
    [ring.middleware.gzip :refer [wrap-gzip]]
    [ring.middleware.json :refer [wrap-json-body wrap-json-params]])

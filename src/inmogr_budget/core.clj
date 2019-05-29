@@ -1,7 +1,6 @@
 (ns inmogr-budget.core
   (:gen-class)
   (:require
-   [clojure.core :as clojure]
    [inmogr-budget.app :refer [app]]
    [inmogr-budget.start-server :refer [start-server]]
    [ring.middleware.reload :refer [wrap-reload]]))
