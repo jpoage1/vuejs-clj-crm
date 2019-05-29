@@ -2,7 +2,8 @@
   (:gen-class)
   (:require
    [clojure.core :as clojure]
-   [inmogr-budget.send-json :refer [send-json]]
+   [inmogr-budget.error-message :refer [error-message]]
+   [inmogr-budget.stats :refer [stats]]
    [ring.middleware.reload :refer [wrap-reload]]
    [ring.adapter.jetty :as jetty]
    [ring.middleware.gzip :refer [wrap-gzip]]
@@ -14,12 +15,6 @@
         [ring.adapter.jetty]
         [ring.middleware.cookies]
         [ring.middleware.params]))
-
-(def error-message (send-json ["Error"] 404))
-(defn stats [request]
-  (send-json (body-string request)))
-
-
 (defroutes app (POST "/stats" [] stats)
   (not-found error-message))
 
