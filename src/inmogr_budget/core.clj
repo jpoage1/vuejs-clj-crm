@@ -2,12 +2,12 @@
   (:gen-class)
   (:require
    [inmogr-budget.app :refer [app]]
-   [inmogr-budget.start-server :refer [start-server]]
+   [inmogr-budget.start-server :refer [start-server] :reload true]
    [ring.middleware.reload :refer [wrap-reload]]))
 
-(defn -main
+(defn -dev-main
   [port-number]
   (start-server port-number (wrap-reload app)))
-(defn main
+(defn -main
   [port-number]
   (start-server port-number app))
