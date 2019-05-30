@@ -7,12 +7,6 @@
             [inmogr-budget.db.read-staff :refer [read-staff]]
             [inmogr-budget.send-json :refer [send-json]]
             [ring.util.request :refer [body-string]]))
-
-(ns inmogr-budget.stats
-    (:require [inmogr-budget.employee-stats :refer [employee-stats]]
-
-[goals :refer [goals]]))
-
 (defn parse-stats
   [config staff]
   (let [company-goals (goals config staff)];
@@ -30,7 +24,7 @@
 ; mannual lookup in data file
 (defn lookup-stats
 [config-id team-id]
-  (let [{config (lookup config :id config-id)
+  (let [config (lookup config :id config-id)
         staff (lookup staff :team team-id)]
   (send-json (parse-stats config staff))))
 
@@ -38,7 +32,7 @@
 ; db lookup
 (defn query-stats
 [config-id team-id]
-  (let [{config (read-config config-id)
+  (let [config (read-config config-id)
         staff (read-staff team-id)]
   (send-json (parse-stats config staff))))
 
@@ -46,6 +40,6 @@
 (defn read-stats
 [request]
   (let [{config-id :config
-         team-id :team} (body-string request)
+         team-id :team} (body-string request)]
   (send-json (lookup-stats config-id team-id))))
 
