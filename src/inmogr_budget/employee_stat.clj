@@ -1,5 +1,5 @@
 (ns inmogr-budget.employee-stat
-  (:require [inmogr-budget.math :refer [evaluate]]
+  (:require [inmogr-budget.utilities.math :refer [evaluate]]
             [inmogr-budget.wage-helper :refer [wage-helper] :reload true]
             [inmogr-budget.weekly-wage :refer [weekly-wage] :reload true]
             [inmogr-budget.annual-revenue :refer [annual-revenue]]

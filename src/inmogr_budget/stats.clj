@@ -22,7 +22,7 @@
          stack)))
 
 ; mannual lookup in data file
-(defn lookup-stats
+(defn stats-lookup
 [config-id team-id]
   (let [config (lookup config :id config-id)
         staff (lookup staff :team team-id)]
@@ -30,16 +30,32 @@
 
 
 ; db lookup
-(defn query-stats
+(defn stats-query
 [config-id team-id]
   (let [config (read-config config-id)
         staff (read-staff team-id)]
   (send-json (parse-stats config staff))))
 
+; stats sent via post request
+(defn stats-read
+  [request]
+  (let [{config :config
+         team :team} (body-string request)
+    stats-config {:config config
+           :team team}]
+    (send-json stats-config)))
+
 ; get config-id and team-id from request
-(defn read-stats
-[request]
+(defn handle-stats
+  [request method]
   (let [{config-id :config
          team-id :team} (body-string request)]
-  (send-json (lookup-stats config-id team-id))))
+    (send-json (method config-id team-id))))
+
+(defn query-stats [request]
+  (handle-stats request stats-query))
+(defn lookup-stats [request]
+  (handle-stats request stats-lookup))
+(defn read-stats [request]
+  (stats-read request))
 

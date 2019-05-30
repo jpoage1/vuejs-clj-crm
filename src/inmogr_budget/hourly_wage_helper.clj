@@ -1,5 +1,5 @@
 (ns inmogr-budget.hourly-wage-helper
-  (:require [inmogr-budget.math :refer [evaluate]]))
+  (:require [inmogr-budget.utilities.math :refer [evaluate]]))
 (defn hourly-wage-helper
   [config employee revenue]
   (* 

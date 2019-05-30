@@ -1,8 +1,8 @@
 (ns inmogr-budget.core
   (:gen-class)
   (:require
-   [inmogr-budget.app :refer [app]]
-   [inmogr-budget.start-server :refer [start-server] :reload true]
+   [inmogr-budget.app :refer [app] :reload-all true]
+   [inmogr-budget.start-server :refer [start-server] :reload-all true]
    [ring.middleware.reload :refer [wrap-reload]]))
 
 (defn -dev-main
