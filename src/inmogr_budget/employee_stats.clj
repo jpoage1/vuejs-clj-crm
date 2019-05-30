@@ -11,4 +11,4 @@
         employees {manager (staff-by-role staff manager)
                    developer (staff-by-role staff developer)
                    sdr (staff-by-role staff sdr)}]
-    (map staff #(employee-stat config, employees, %1, d))))
+    (map #(employee-stat config, employees, %1, d) staff)))

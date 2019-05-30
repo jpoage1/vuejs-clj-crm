@@ -11,5 +11,5 @@ Its primary puprose at the moment is to assure the correct arguments are passed 
    :qualified_to_sale :int})
 (defn insert-config
   [config]
-  (insert :config config)
+  (insert :config config))
   ;(insert :config (if (map? config) (map parse-config config) (parse-config config))))

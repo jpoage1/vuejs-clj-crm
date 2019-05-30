@@ -3,6 +3,6 @@
 (defn teams
   [staff]
   (map
-   (teams-numbers staff)
    (fn [team-no]
-     (team staff team-no))))
+     (team staff team-no))
+   (teams-numbers staff)))

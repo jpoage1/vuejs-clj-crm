@@ -3,6 +3,7 @@
 (defn devs-weekly-revenue
   [devs productRate]
   (reduce +
-          (map devs
-               (fn [dev]
-                 (dev-weekly-revenue dev, productRate)))))
+          (map
+           (fn [dev]
+             (dev-weekly-revenue dev, productRate))
+           devs)))

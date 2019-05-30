@@ -6,6 +6,7 @@
             [inmogr-budget.data.config :refer [config] :reload true]
             [inmogr-budget.db.read-staff :refer [read-staff]]
             [inmogr-budget.send-json :refer [send-json]]
+            [clojure.data.json :as json]
             [ring.util.request :refer [body-string]]))
 (defn parse-stats
   [config staff]
@@ -13,13 +14,14 @@
     {; Calculates how much in total it costs to keep devs happy and busy
      :company-goals company-goals
      ; Goals for specific employees set based on information stored in staff variables
-     :employee-goals (map employee-stats company-goals)}))
+     ;:employee-goals (map (employee-stats company-goals staff) company-goals)
+     }))
 
 (defn lookup
   [stack match-key id]
   (map (fn [x]
-         (= id (get x match-key))
-         stack)))
+         (= id (get x match-key)))
+         stack))
 
 ; mannual lookup in data file
 (defn stats-lookup
@@ -40,10 +42,8 @@
 (defn stats-read
   [request]
   (let [{config :config
-         team :team} (body-string request)
-    stats-config {:config config
-           :team team}]
-    (send-json stats-config)))
+         staff :staff} (json/read-json (body-string request))]
+    (send-json (parse-stats config staff))))
 
 ; get config-id and team-id from request
 (defn handle-stats

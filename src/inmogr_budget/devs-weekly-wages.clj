@@ -2,4 +2,7 @@
     (:refer [devWeeklyWages :refer [devWeeklyWages]]))
 (defn devs-weekly-wages
   [devs, productRate]
-  (reduce + (map devs (fn [dev] (dev-weekly-wages dev, productRate)))))
+  (reduce +
+          (map (fn [dev]
+                 (dev-weekly-wages dev, productRate))
+               devs)))
