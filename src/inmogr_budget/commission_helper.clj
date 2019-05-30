@@ -1,4 +1,4 @@
-(ns inmogr-budget.commissions-helper)
+(ns inmogr-budget.commission-helper)
 (defn commission-helper
   [employee revenue]
   (* revenue (get employee :rate)))
