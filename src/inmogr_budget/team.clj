@@ -1,7 +1,8 @@
-(ns inmogr-budget.team)
+(ns inmogr-budget.team
+  )
 (defn team
     [staff, team]
-    (if (is-map team)
+    (vec (if (is-map team)
         (filter
             (fn [employee]
                 (or
@@ -22,4 +23,4 @@
                   team)
                  (=
                   (get employee :id)
-                  team))))))
+                  team)))))))

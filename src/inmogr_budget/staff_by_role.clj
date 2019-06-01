@@ -1,8 +1,8 @@
-(ns inmogr-budget.staff-by-role)
+(ns inmogr-budget.staff-by-role
+  (:require [inmogr-budget.utilities.casting :refer [to-integer]]
+            ))
 (defn staff-by-role [staff role]
-  (filter
-   (fn [employee]
-     (=
-      (get employee :role)
-      role))
-   staff))
+		(vec (filter
+   	(fn [employee]
+    	 true)
+   staff)))

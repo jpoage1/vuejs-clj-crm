@@ -1,4 +1,5 @@
-(ns inmogr-budget.team-numbers)
+(ns inmogr-budget.team-numbers
+  )
 (defn teams-numbers
   [staff]
   (map

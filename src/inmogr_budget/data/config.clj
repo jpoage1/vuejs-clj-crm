@@ -1,6 +1,7 @@
 (ns inmogr-budget.data.config)
-(def config [{:averageDeal 3500
-              :productRate 150, ;Dollars Per Hour
-              :prospectToLead ".10", ; Rate of conversion in decimal format
-              :leadToQualified ".10"
-              :qualifiedToSale ".10"}])
+(def config [{:full-time 40
+              :average-deal 3500
+              :product-rate 150, ;Dollars Per Hour
+              :prospect-to-lead ".10", ; Rate of conversion in decimal format
+              :lead-to-qualified ".10"
+              :qualified-to-sale ".10"}])

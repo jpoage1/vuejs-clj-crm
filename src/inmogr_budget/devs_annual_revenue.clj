@@ -1,9 +1,11 @@
 (ns inmogr-budget.devs-annual-revenue
-  (:require [inmogr-budget.dev-annual-revenue :refer [dev-annual-revenue]]))
+  (:require [inmogr-budget.dev-annual-revenue :refer [dev-annual-revenue]]
+            ))
 (defn devs-annual-revenue
-  [devs product-rate]
+  [config devs]
+  (prn 'devs-annual-revenue devs)
   (reduce +
           (map
            (fn [dev]
-             (dev-annual-revenue dev product-rate))
+             (dev-annual-revenue config dev))
            devs)))

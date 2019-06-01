@@ -1,6 +1,7 @@
 (ns inmogr-budget.dev-annual-wage.clj
   (:require [inmogr-budget.dev-weekly-wages :refer [dev-weekly-wages]]
-            [inmogr-budget.work-weeks :refer [work-weeks]]))
+            [inmogr-budget.work-weeks :refer [work-weeks]]
+            ))
 (defn dev-annual-wages
   [employee]
   (*

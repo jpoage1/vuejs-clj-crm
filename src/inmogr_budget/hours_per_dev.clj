@@ -1,4 +1,5 @@
-(ns inmogr-budget.hours-per-dev)
+(ns inmogr-budget.hours-per-dev
+  )
 (defn hours-per-dev
-    [costPerDev, wage]
-    (/ )costPerDev wage)
+    [costPerDev wage]
+    (/ costPerDev wage))
