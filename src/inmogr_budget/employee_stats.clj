@@ -15,8 +15,8 @@
     (map (fn [employee]
            (let [employee-role (to-integer (get employee :role))
            						employees-by-role (get employees employee-role)]
-           (prn 'employee-stats 'employees-by-role (to-integer (get employee :role)))
-           (prn 'employee-stats 'employees-by-role employees)
-           (prn 'employee-stats 'employees-by-role employees-by-role)
+
+
+
              (employee-stat config employees-by-role employee d)))
          staff)))

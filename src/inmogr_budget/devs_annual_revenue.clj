@@ -3,7 +3,7 @@
             ))
 (defn devs-annual-revenue
   [config devs]
-  (prn 'devs-annual-revenue devs)
+
   (reduce +
           (map
            (fn [dev]

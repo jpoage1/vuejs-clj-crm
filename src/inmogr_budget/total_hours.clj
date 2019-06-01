@@ -7,7 +7,5 @@
        (to-integer (get employee :hours)))
    staff))
 (defn total-hours [staff]
-(prn 'total-hours (reduce +
-          (vec (staff-hours  staff))))
   (reduce +
           (vec (staff-hours  staff))))

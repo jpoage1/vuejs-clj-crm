@@ -3,5 +3,5 @@
             ))
 (defn dev-weekly-revenue
   [config dev]
-  (prn 'dev-weekly-revenue)
+
   (dev-weekly-earnings config dev))

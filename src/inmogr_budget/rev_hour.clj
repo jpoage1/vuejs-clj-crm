@@ -4,7 +4,7 @@
             ))
 (defn rev-hour
   [employees deals average-deal]
-  (prn 'rev-hour (revenue deals average-deal) (total-hours employees))
+
   (/
    (revenue deals average-deal)
    (total-hours employees)))

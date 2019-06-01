@@ -3,7 +3,7 @@
 	 [inmogr-budget.utilities.casting :refer [to-integer]]))
 (defn hourly-wage-helper
   [config employee revenue]
-  (prn 'hourly-wage-helper)
+
   (*
    (/ revenue  (to-integer (get config :product-rate)))
    (evaluate (get employee :rate))))

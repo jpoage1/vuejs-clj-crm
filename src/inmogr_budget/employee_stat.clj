@@ -8,7 +8,7 @@
             ))
 (defn get-stat
   [employees employee deals average-deal]
-  (prn 'get-stat employees)
+
   (fn
     ([f] 
      (f employees employee deals average-deal))
@@ -16,7 +16,7 @@
      (f employees employee deals average-deal h))))
 (defn employee-stat
   [config employees employee deals]
-  (prn 'employee-stat employees)
+
   (let [employee-role (get employee :role)
         helper (wage-helper config employee employee-role)
          {average-deal :average-deal} config

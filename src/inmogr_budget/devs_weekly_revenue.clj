@@ -3,8 +3,8 @@
             ))
 (defn devs-weekly-revenue
   [config devs]
-  (prn config)
-  (prn devs)
+
+
   (reduce +
           (map
            (fn [dev]
