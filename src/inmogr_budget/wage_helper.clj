@@ -7,7 +7,7 @@
 (defn wage-helper
   [config employee role] 
   (let [wage-by-role {manager (fn [employee revenue]
-                       								 (wage-helper config employee revenue))
+                       								 (hourly-wage-helper config employee revenue))
                       developer (fn [employee revenue]
                                   (hourly-wage-helper config employee revenue))
                       sdr (fn [employee revenue]
