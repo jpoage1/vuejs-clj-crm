@@ -1,4 +1,4 @@
-# inmogr-budget
+# js-budget-analyzer
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar inmogr-budget-0.1.0-standalone.jar [args]
+    $ java -jar js-budget-analyzer-0.1.0-standalone.jar [args]
 
 ## Options
 

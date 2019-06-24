@@ -1,6 +1,6 @@
-(ns inmogr-budget.core-test
+(ns js-budget-analyzer.core-test
   (:require [clojure.test :refer :all]
-            [inmogr-budget.core :refer :all]))
+            [js-budget-analyzer.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

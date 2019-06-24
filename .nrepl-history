@@ -1,3 +1,3 @@
 (-main)
- (load-file "src/inmogr_budget/core.clj")
+ (load-file "src/js_budget_analyzer/core.clj")
 exit

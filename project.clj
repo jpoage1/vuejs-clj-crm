@@ -1,4 +1,4 @@
-(defproject inmogr-budget "0.1.0-SNAPSHOT"
+(defproject js-budget-analyzer "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -14,6 +14,6 @@
                  [amalloy/ring-gzip-middleware "0.1.3"]
                  [org.clojure/java.jdbc "0.6.1"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]]
-  :main ^:skip-aot inmogr-budget.core
+  :main ^:skip-aot js-budget-analyzer.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
