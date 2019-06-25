@@ -1,8 +1,8 @@
 (ns clj-crm.stats.wage-helper
   (:require [clj-crm.data.labels  :refer [developer sdr manager]]
   									 [clj-crm.utilities.casting  :refer [to-integer]]
-            [clj-crm.stats.hourly-wage-helper :refer [hourly-wage-helper] :reload true]
-            [clj-crm.stats.commission-helper :refer [commission-helper] :reload true]
+            [clj-crm.stats.hourly-wage-helper :refer [hourly-wage-helper]]
+            [clj-crm.stats.commission-helper :refer [commission-helper]]
             ))
 (defn wage-helper
   [config employee role] 

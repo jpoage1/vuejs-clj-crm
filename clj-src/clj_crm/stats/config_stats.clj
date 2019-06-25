@@ -1,7 +1,7 @@
 (ns clj-crm.stats.config-stats
     (:require  [clj-crm.data.labels  :refer [developer sdr manager]]
                [clj-crm.stats.staff-by-role :refer [staff-by-role]]
-               [clj-crm.stats.devs-annual-revenue :refer [devs-annual-revenue] :reload true]
+               [clj-crm.stats.devs-annual-revenue :refer [devs-annual-revenue]]
                [clj-crm.stats.devs-weekly-revenue :refer [devs-weekly-revenue]]
                ))
 (defn config-stats

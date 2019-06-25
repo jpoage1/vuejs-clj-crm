@@ -1,9 +1,9 @@
 (ns clj-crm.stats.employee-stat
   (:require [clj-crm.utilities.math :refer [evaluate]]
-            [clj-crm.stats.wage-helper :refer [wage-helper] :reload true]
-            [clj-crm.stats.weekly-wage :refer [weekly-wage] :reload true]
+            [clj-crm.stats.wage-helper :refer [wage-helper]]
+            [clj-crm.stats.weekly-wage :refer [weekly-wage]]
             [clj-crm.stats.annual-revenue :refer [annual-revenue]]
-            [clj-crm.stats.annual-wage :refer [annual-wage] :reload true]
+            [clj-crm.stats.annual-wage :refer [annual-wage]]
             [clj-crm.stats.weekly-revenue :refer [weekly-revenue]]
             ))
 (defn get-stat

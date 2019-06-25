@@ -1,5 +1,5 @@
 (ns clj-crm.db.insert-config
-  (:require [clj-crm.db.wrappers :refer [insert] :reload true]))
+  (:require [clj-crm.db.wrappers :refer [insert]]))
 (defn parse-config
   "This function is practically useless at the moment, until I get into data validation.
 Its primary puprose at the moment is to assure the correct arguments are passed to the database"

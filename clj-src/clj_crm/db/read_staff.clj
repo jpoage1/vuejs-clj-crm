@@ -1,5 +1,5 @@
 (ns clj-crm.db.read-staff
-  (:require [clj-crm.db.wrappers :refer [query] :reload true]))
+  (:require [clj-crm.db.wrappers :refer [query]]))
 (def read-all-staff
   #(query ["SELECT * FROM staff"]))
 (defn read-staff [id]

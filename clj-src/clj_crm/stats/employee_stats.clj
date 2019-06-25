@@ -1,6 +1,6 @@
 (ns clj-crm.stats.employee-stats
   (:require [clj-crm.data.labels :refer [developer sdr manager]]
-            [clj-crm.stats.employee-stat :refer [employee-stat] :reload true]
+            [clj-crm.stats.employee-stat :refer [employee-stat]]
             [clj-crm.stats.staff-by-role :refer [staff-by-role]]
             [clj-crm.stats.deals :refer [deals]]
 	 [clj-crm.utilities.casting :refer [to-integer]]))

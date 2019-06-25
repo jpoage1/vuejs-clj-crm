@@ -1,5 +1,5 @@
 (ns clj-crm.db.create-tables
-  (:require [clj-crm.db.wrappers :refer [db-do-commands] :reload true]
+  (:require [clj-crm.db.wrappers :refer [db-do-commands]]
             [clojure.java.jdbc :refer [create-table-ddl]]))
 (def create-config-table-ddl
   (create-table-ddl :config

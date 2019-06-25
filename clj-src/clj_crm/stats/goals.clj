@@ -5,8 +5,8 @@
    [clj-crm.stats.staff-by-role :refer [staff-by-role]]
    [clj-crm.stats.all-config-stats :refer [all-config-stats]]
    [clj-crm.stats.deals :refer [deals]]
-   [clj-crm.stats.profit :refer [profit] :reload true]
-   [clj-crm.stats.cost-per-employee :refer [cost-per-employee] :reload true]
+   [clj-crm.stats.profit :refer [profit]]
+   [clj-crm.stats.cost-per-employee :refer [cost-per-employee]]
    ))
 (defn g
   ([config staff] (g config staff nil))

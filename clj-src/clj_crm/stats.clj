@@ -1,15 +1,15 @@
 (ns clj-crm.stats
-  (:require [clj-crm.stats.goals :refer [goals] :reload true]
-            [clj-crm.stats.employee-stats :refer [employee-stats] :reload true]
+  (:require [clj-crm.stats.goals :refer [goals]]
+            [clj-crm.stats.employee-stats :refer [employee-stats]]
             [clj-crm.db.read-config :refer [read-config]]
-            [clj-crm.data.staff :refer [staff] :reload true]
-            [clj-crm.data.config :refer [config] :reload true]
             [clj-crm.db.read-staff :refer [read-staff]]
             [clj-crm.send-json :refer [send-json]]
             [clj-crm.utilities.math :refer [evaluate]]
             [clojure.data.json :as json]
             [ring.util.request :refer [body-string]]
             ))
+; Since I am migrating to a database, I deleted the staff and config files
+; and will need to query the database to get the data
 (defn parse-stats
   [config staff]
   (let [company-goals (goals config staff)];
