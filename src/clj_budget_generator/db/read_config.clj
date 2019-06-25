@@ -1,6 +1,0 @@
-(ns js-budget-analyzer.db.read-config
-  (:require [js-budget-analyzer.db.wrappers :refer [query] :reload true]))
-(defn read-config [id]
-  (query ["SELECT * FROM config WHERE id = ?" id]))
-(def read-all-config
-  #(query ["SELECT * FROM config"]))
